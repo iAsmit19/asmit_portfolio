@@ -1,0 +1,14 @@
+@use "../utils/fonts";
+@use "../utils//variables";
+
+.uc_sec {
+  background-color: variables.$default_bg;
+  color: variables.$default_color;
+  height: 100%;
+  width: 100%;
+  font-family: "universal";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

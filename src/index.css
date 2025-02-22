@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "universal";
+  src: url(./assets/fonts/sf-pro-display_regular.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+    /* background-color: #000; */
+  /* color: #fff; */
+  font-family: "universal";
+}

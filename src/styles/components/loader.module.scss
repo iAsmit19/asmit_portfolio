@@ -1,0 +1,104 @@
+@use "../utils/fonts";
+@use "../utils/variables";
+
+.loader {
+  background-color: variables.$loader_bg;
+  color: variables.$loader_color;
+  height: 100vh;
+  width: 100vw;
+  inset: 0;
+  user-select: none;
+  overflow: hidden;
+
+  .loader__cont {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "universal";
+  }
+
+  .loader__dial {
+    // border: 1px solid gray;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .loader__dial_element {
+      // border: 1px solid red;
+      font-family: "universal sm";
+      font-size: 2rem;
+      width: 300px;
+      text-align: center;
+    }
+
+    .loader__dial_element_main {
+      font-family: "universal sm";
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .loader__element_fall,
+    .loader__element_rise {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .loader__element_main {
+      display: flex;
+    }
+
+    .loader__dial_element_fall {
+      &:nth-child(1) {
+        // color: #ffffff24;
+        opacity: 0.05
+      }
+
+      &:nth-child(2) {
+        // color: #a4a4a45f;
+        opacity: 0.25;
+      }
+
+      &:nth-child(3) {
+        // color: #bebebe7d;
+        opacity: 0.35;
+      }
+
+      &:nth-child(4) {
+        // color: #ffffff8b;
+        opacity: 0.55;
+      }
+    }
+
+    .loader__dial_element_rise {
+
+      &:nth-child(1) {
+        // color: #ffffff8b;
+        opacity: 0.55;
+      }
+
+      &:nth-child(2) {
+        // color: #bebebe7d;
+        opacity: 0.35;
+      }
+
+      &:nth-child(3) {
+        // color: #a4a4a45f;
+        opacity: 0.25;
+      }
+
+      &:nth-child(4) {
+        // color: #ffffff24;
+        opacity: 0.05
+      }
+    }
+  }
+}
