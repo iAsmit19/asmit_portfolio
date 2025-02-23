@@ -5,6 +5,7 @@ import Spline from "@splinetool/react-spline";
 import { email } from "../data/per_data";
 import { useRef, useState } from "react";
 import gsap from "gsap";
+// import { motion } from "motion/react";
 
 const Section1 = () => {
   const [copied, setCopied] = useState(false);
@@ -23,13 +24,11 @@ const Section1 = () => {
   };
 
   const handleMouseEnter = () => {
-    setTimeout(() => {
-      gsap.to(tlTpRef.current, {
-        opacity: 1,
-        ease: "circ.inOut",
-        duration: 0.1,
-      });
-    }, 1000);
+    gsap.to(tlTpRef.current, {
+      opacity: 1,
+      ease: "circ.inOut",
+      duration: 0.1,
+    });
   };
 
   const handleMouseLeave = () => {
@@ -62,6 +61,8 @@ const Section1 = () => {
           </p>
           <div
             className={hero.sec1__email}
+            // onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleMouseLeave}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >

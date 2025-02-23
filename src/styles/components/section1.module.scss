@@ -22,7 +22,7 @@
   .section1__bg {
     position: absolute;
 
-    display: none;
+    // display: none;
   }
 
   .section1__cont {
@@ -124,7 +124,7 @@
         border: 1px solid #22222276;
         border-radius: 4px;
         background-color: #15151581;
-        color: #797979;
+        color: #a3a3a3;
         // width: 10rem;
         margin-top: 10px;
         padding: 5px 15px;
@@ -141,6 +141,11 @@
         pointer-events: none;
         z-index: 1;
         transition: all ease-in-out 200ms;
+
+        a {
+          height: 100%;
+          width: 100%;
+        }
       }
     }
   }

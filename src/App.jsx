@@ -4,6 +4,7 @@ import AppContext from "./context/AppContext";
 // import { AnimatePresence, motion } from "motion/react";
 // import { animate } from "motion";
 import SiteContent from "./SiteContent";
+import DynamicHead from "./DynamicHead";
 
 function App() {
   const {
@@ -33,6 +34,7 @@ function App() {
   }, [isLoading, setIsLoading, setShowSite]);
   return (
     <div>
+      <DynamicHead />
       {/* <AnimatePresence mode="wait">
         {isLoading ? <Loader /> : null}
       </AnimatePresence>
