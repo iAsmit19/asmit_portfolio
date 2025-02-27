@@ -3,9 +3,9 @@ import { loaderElData } from "./data/load_data";
 import { motion } from "motion/react";
 
 const Loader = () => {
-  const elementFall = loaderElData.slice(0, 4);
+  // const elementFall = loaderElData.slice(0, 4);
   const elementMain = loaderElData.slice(4, 5);
-  const elementRise = loaderElData.slice(5, 9);
+  // const elementRise = loaderElData.slice(5, 9);
 
   const elMainChar = elementMain.length > 0 ? elementMain[0].split("") : [];
 
@@ -16,13 +16,13 @@ const Loader = () => {
         opacity: 0,
         transition: {
           default: { ease: "easeInOut" },
-          opacity: { duration: 3, delay: 2 },
+          opacity: { duration: 0.7, delay: 1 },
         },
       }}
     >
       <div className={load.loader__cont}>
         <div className={load.loader__dial}>
-          <motion.div
+          {/* <motion.div
             className={load.loader__element_fall}
             initial={{
               opacity: 0,
@@ -49,7 +49,7 @@ const Loader = () => {
                 {element}
               </div>
             ))}
-          </motion.div>
+          </motion.div> */}
           <motion.div className={load.loader__element_main}>
             {elMainChar.map((element, index) => (
               <motion.div
@@ -71,7 +71,8 @@ const Loader = () => {
                 exit={{
                   opacity: 0,
                   transition: {
-                    duration: 2,
+                    duration: 1,
+                    delay: index * 0.3,
                   },
                 }}
               >
@@ -79,7 +80,7 @@ const Loader = () => {
               </motion.div>
             ))}
           </motion.div>
-          <motion.div
+          {/* <motion.div
             className={load.loader__element_rise}
             initial={{
               opacity: 0,
@@ -106,7 +107,7 @@ const Loader = () => {
                 {element}
               </div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </motion.div>

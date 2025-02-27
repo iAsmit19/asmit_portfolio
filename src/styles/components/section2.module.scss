@@ -1,10 +1,39 @@
 @use "../utils/fonts";
+@use "../utils//variables";
 
-.skills_sec {
-  height: 150vh;
+.work_sec {
+  // border-top: 1px solid #cacaca;
+  // border-bottom: 1px solid #cacaca;
+  background-color: variables.$default_bg;
+  color: variables.$default_color;
+  // height: 100vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+
+  .work_sec__cont {
+    height: 100%;
+    width: 100%;
+
+    .scroll_head_cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 70px;
+
+      .sec__project_cards {
+        // border: 1px solid #cacaca;
+        // height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        padding: 30px;
+      }
+    }
+
+    // .project_bento_grid {
+
+    // }
+  }
 }

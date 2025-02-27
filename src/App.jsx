@@ -1,8 +1,7 @@
-// import Loader from "./Loader";
+import Loader from "./Loader";
 import { useContext, useEffect } from "react";
 import AppContext from "./context/AppContext";
-// import { AnimatePresence, motion } from "motion/react";
-// import { animate } from "motion";
+import { AnimatePresence, motion } from "motion/react";
 import SiteContent from "./SiteContent";
 import DynamicHead from "./DynamicHead";
 
@@ -10,7 +9,7 @@ function App() {
   const {
     isLoading,
     setIsLoading,
-    // showSite,
+    showSite,
     setShowSite,
   } = useContext(AppContext);
 
@@ -19,7 +18,7 @@ function App() {
     if (isLoading) {
       const loadTimer = setTimeout(() => {
         setIsLoading(false);
-      }, 4000);
+      }, 3000);
 
       return () => clearTimeout(loadTimer);
     }
@@ -28,14 +27,14 @@ function App() {
     if (!isLoading) {
       const delayContent = setTimeout(() => {
         setShowSite(true);
-      }, 5000);
+      }, 1000);
       return () => clearTimeout(delayContent);
     }
   }, [isLoading, setIsLoading, setShowSite]);
   return (
     <div>
       <DynamicHead />
-      {/* <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait">
         {isLoading ? <Loader /> : null}
       </AnimatePresence>
 
@@ -54,8 +53,8 @@ function App() {
             <SiteContent />
           </motion.div>
         )}
-      </AnimatePresence> */}
-      <SiteContent />
+      </AnimatePresence>
+      {/* <SiteContent /> */}
     </div>
   );
 }

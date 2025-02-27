@@ -1,0 +1,53 @@
+@use "../utils/fonts";
+@use "../utils//variables";
+
+.uni_head {
+  height: 12rem;
+  width: 100%;
+
+  .uni_head__cont {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .head_heading {
+      // border: 1px solid white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      h2 {
+        color: variables.$backdrop_heading;
+        font-size: 8rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .head__sub_heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      z-index: 1;
+
+      p {
+        color: variables.$sub_heading;
+        font-size: 0.875rem;
+        font-family: "hand write";
+      }
+
+      .sub_heading__lines {
+        background-color: variables.$uni_lines;
+        display: none;
+        // display: inline-block;
+        height: 1px;
+        width: 200px;
+        // opacity: 0;
+      }
+    }
+  }
+}
