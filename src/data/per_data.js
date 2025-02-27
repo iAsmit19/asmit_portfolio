@@ -1,3 +1,7 @@
+import portfolioImage from "/src/assets/images/projects/personal_portfolio/personal_portfolio.webp";
+import cypherNotesAppImage from "/src/assets/images/projects/cypher_notes_app/cypher_notes_app.webp";
+import luxuryPulseImage from "/src/assets/images/projects/luxury_pulse/luxury_pulse.webp";
+import obyssImage from "/src/assets/images/projects/obyss_agency/obyss_agency.webp";
 // my email
 export const email = "iamasmit1919@gmail.com";
 
@@ -8,8 +12,7 @@ export const projects = [
     color_1: "#171717",
     color_2: "#222222",
     color_3: "#333333",
-    imagePath:
-      "./src/assets/images/projects/personal_portfolio/personal_portfolio.webp",
+    imagePath: portfolioImage,
     type: "Personal Website",
     title: "Asmit's (Me) Portfolio",
     description:
@@ -26,8 +29,7 @@ export const projects = [
     color_1: "#eeeeee",
     color_2: "#ffffff",
     color_3: "#ffffff",
-    imagePath:
-      "./src/assets/images/projects/cypher_notes_app/cypher_notes_app.webp",
+    imagePath: cypherNotesAppImage,
     type: "Full-Stack Web App",
     title: "Cypher Notes App",
     description:
@@ -50,7 +52,7 @@ export const projects = [
     color_1: "#eeeeee",
     color_2: "#ffffff",
     color_3: "#ffffff",
-    imagePath: "./src/assets/images/projects/luxury_pulse/luxury_pulse.webp",
+    imagePath: luxuryPulseImage,
     type: "Frontend Website",
     title: "Luxury Pulse Redesigned",
     description:
@@ -67,7 +69,7 @@ export const projects = [
     color_1: "#eeeeee",
     color_2: "#ffffff",
     color_3: "#ffffff",
-    imagePath: "./src/assets/images/projects/obyss_agency/obyss_agency.webp",
+    imagePath: obyssImage,
     type: "Frontend Website",
     title: "Obyss Agency Portfolio",
     description: "Cloned Obyss Agency Portfolio to practice Animations.",
